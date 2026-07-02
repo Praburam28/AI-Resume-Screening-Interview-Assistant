@@ -1,0 +1,857 @@
+:root {
+  --premium-bg: #f3f6fb;
+  --premium-card: rgba(255, 255, 255, 0.92);
+  --premium-border: rgba(148, 163, 184, 0.22);
+  --premium-text: #0f172a;
+  --premium-muted: #64748b;
+  --premium-primary: #2563eb;
+  --premium-primary-dark: #1d4ed8;
+  --premium-purple: #7c3aed;
+  --premium-pink: #db2777;
+  --premium-green: #059669;
+  --premium-orange: #ea580c;
+  --premium-cyan: #0891b2;
+  --premium-red: #dc2626;
+  --premium-dark: #020617;
+  --premium-sidebar: #060b1a;
+  --premium-shadow-sm: 0 10px 25px rgba(15, 23, 42, 0.08);
+  --premium-shadow-md: 0 18px 45px rgba(15, 23, 42, 0.12);
+  --premium-shadow-lg: 0 30px 80px rgba(15, 23, 42, 0.18);
+  --premium-radius: 28px;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #94a3b8 transparent;
+}
+
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: #94a3b8;
+  border-radius: 999px;
+}
+
+body {
+  background:
+    radial-gradient(circle at top left, rgba(37, 99, 235, 0.08), transparent 32%),
+    radial-gradient(circle at top right, rgba(124, 58, 237, 0.08), transparent 30%),
+    linear-gradient(180deg, #f8fafc, #eef2ff);
+  color: var(--premium-text);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* AUTH PREMIUM UI */
+
+.auth-page {
+  background:
+    radial-gradient(circle at 16% 18%, rgba(37, 99, 235, 0.38), transparent 28%),
+    radial-gradient(circle at 82% 80%, rgba(124, 58, 237, 0.34), transparent 30%),
+    radial-gradient(circle at 50% 55%, rgba(6, 182, 212, 0.2), transparent 34%),
+    linear-gradient(135deg, #020617 0%, #0f172a 48%, #111827 100%) !important;
+  position: relative;
+}
+
+.auth-page::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+  background-size: 42px 42px;
+  mask-image: radial-gradient(circle at center, black, transparent 78%);
+  pointer-events: none;
+}
+
+.auth-brand,
+.hero-copy,
+.auth-metrics,
+.auth-card {
+  position: relative;
+  z-index: 2;
+}
+
+.auth-logo,
+.brand-logo,
+.dropzone-icon,
+.context-icon,
+.job-card-icon,
+.quick-action-icon,
+.role-insight-icon,
+.security-icon,
+.profile-avatar,
+.candidate-avatar,
+.candidate-avatar-lg,
+.candidate-avatar-xl,
+.header-icon {
+  box-shadow:
+    0 18px 40px rgba(37, 99, 235, 0.22),
+    inset 0 1px 0 rgba(255, 255, 255, 0.25);
+}
+
+.auth-card {
+  background: rgba(255, 255, 255, 0.88) !important;
+  border: 1px solid rgba(255, 255, 255, 0.44) !important;
+  box-shadow:
+    0 40px 100px rgba(0, 0, 0, 0.32),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8) !important;
+  backdrop-filter: blur(28px) saturate(140%) !important;
+}
+
+.auth-card-header h2,
+.hero-copy h2,
+.page-header h2,
+.welcome-banner h2,
+.matching-hero h3,
+.question-hero h3,
+.summary-hero h3,
+.search-hero h3,
+.ranking-hero h3,
+.settings-hero h3 {
+  letter-spacing: -0.075em !important;
+}
+
+.input-group,
+.select-input,
+.plain-input,
+.job-textarea,
+.filter-input,
+.main-search-box {
+  background: rgba(248, 250, 252, 0.95) !important;
+  border: 1px solid rgba(148, 163, 184, 0.28) !important;
+  transition: 0.22s ease !important;
+}
+
+.input-group:hover,
+.select-input:hover,
+.plain-input:hover,
+.job-textarea:hover,
+.filter-input:hover,
+.main-search-box:hover {
+  border-color: rgba(37, 99, 235, 0.45) !important;
+}
+
+.input-group:focus-within,
+.select-input:focus,
+.plain-input:focus,
+.job-textarea:focus,
+.filter-input:focus-within,
+.main-search-box:focus-within {
+  background: white !important;
+  border-color: var(--premium-primary) !important;
+  box-shadow: 0 0 0 5px rgba(37, 99, 235, 0.11) !important;
+}
+
+/* APP SHELL */
+
+.app-shell {
+  background:
+    radial-gradient(circle at 92% 8%, rgba(37, 99, 235, 0.1), transparent 28%),
+    radial-gradient(circle at 55% 18%, rgba(124, 58, 237, 0.08), transparent 30%),
+    linear-gradient(180deg, #f8fafc, #eef2ff) !important;
+}
+
+/* SIDEBAR PREMIUM */
+
+.sidebar {
+  background:
+    radial-gradient(circle at top left, rgba(37, 99, 235, 0.28), transparent 32%),
+    linear-gradient(180deg, #020617 0%, #0f172a 48%, #111827 100%) !important;
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 28px 0 70px rgba(15, 23, 42, 0.14);
+}
+
+.sidebar::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+  background-size: 34px 34px;
+  pointer-events: none;
+}
+
+.sidebar-brand,
+.sidebar-role-card,
+.sidebar-menu,
+.logout-button {
+  position: relative;
+  z-index: 1;
+}
+
+.brand-logo {
+  background: linear-gradient(135deg, #38bdf8, #2563eb, #7c3aed) !important;
+}
+
+.sidebar-link {
+  position: relative;
+  overflow: hidden;
+  color: #cbd5e1 !important;
+  border: 1px solid transparent;
+}
+
+.sidebar-link::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.09), transparent);
+  opacity: 0;
+  transition: 0.2s ease;
+}
+
+.sidebar-link:hover::before {
+  opacity: 1;
+}
+
+.sidebar-link:hover {
+  border-color: rgba(255, 255, 255, 0.08);
+  transform: translateX(3px);
+}
+
+.sidebar-link.active {
+  background: linear-gradient(135deg, #2563eb, #7c3aed) !important;
+  box-shadow:
+    0 16px 34px rgba(37, 99, 235, 0.34),
+    inset 0 1px 0 rgba(255, 255, 255, 0.25) !important;
+}
+
+.sidebar-role-card {
+  background: rgba(255, 255, 255, 0.075) !important;
+  backdrop-filter: blur(14px);
+}
+
+/* TOPBAR PREMIUM */
+
+.topbar {
+  background: rgba(248, 250, 252, 0.78) !important;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.22) !important;
+  backdrop-filter: blur(22px) saturate(160%) !important;
+}
+
+.topbar h1 {
+  color: #0f172a;
+}
+
+.search-box,
+.date-chip,
+.icon-button,
+.user-chip {
+  background: rgba(255, 255, 255, 0.88) !important;
+  border: 1px solid rgba(148, 163, 184, 0.25) !important;
+  box-shadow: 0 12px 26px rgba(15, 23, 42, 0.06);
+}
+
+.icon-button:hover,
+.user-chip:hover,
+.date-chip:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 18px 34px rgba(15, 23, 42, 0.1);
+}
+
+.user-avatar {
+  background: linear-gradient(135deg, #2563eb, #7c3aed, #db2777) !important;
+}
+
+/* GENERAL PREMIUM CARDS */
+
+.panel,
+.stat-card,
+.candidate-card,
+.job-card,
+.semantic-candidate-card,
+.auth-card,
+.placeholder-card,
+.loader-card,
+.evaluation-stat-card,
+.profile-card,
+.top-candidate-card,
+.top-search-match,
+.match-action-panel,
+.ranking-filter-panel,
+.selected-ranking-job,
+.security-panel,
+.role-insight-panel {
+  border: 1px solid rgba(148, 163, 184, 0.22) !important;
+  box-shadow: var(--premium-shadow-sm) !important;
+}
+
+.panel,
+.stat-card,
+.candidate-card,
+.job-card,
+.semantic-candidate-card,
+.evaluation-stat-card {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(255, 255, 255, 0.88)) !important;
+  backdrop-filter: blur(18px);
+}
+
+.panel:hover,
+.stat-card:hover,
+.candidate-card:hover,
+.job-card:hover,
+.semantic-candidate-card:hover,
+.quick-action-card:hover {
+  box-shadow: var(--premium-shadow-md) !important;
+}
+
+.panel-header h3,
+.stat-card h2,
+.candidate-main h3,
+.job-card-header h3,
+.semantic-card-top h3,
+.profile-card h2,
+.role-insight-panel h3,
+.security-panel h3 {
+  color: #0f172a;
+}
+
+/* BUTTONS */
+
+.primary-button,
+.action-button,
+.small-primary-button {
+  background: linear-gradient(135deg, #2563eb, #7c3aed) !important;
+  color: white !important;
+  border: none !important;
+  box-shadow:
+    0 16px 32px rgba(37, 99, 235, 0.24),
+    inset 0 1px 0 rgba(255, 255, 255, 0.24) !important;
+  transition: 0.2s ease !important;
+}
+
+.primary-button,
+.small-primary-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.primary-button:hover,
+.action-button:hover,
+.small-primary-button:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 22px 42px rgba(37, 99, 235, 0.32),
+    inset 0 1px 0 rgba(255, 255, 255, 0.24) !important;
+}
+
+.ghost-button {
+  background: rgba(248, 250, 252, 0.9) !important;
+  border: 1px solid rgba(148, 163, 184, 0.28) !important;
+  color: #334155 !important;
+  transition: 0.18s ease;
+}
+
+.ghost-button:hover {
+  background: white !important;
+  border-color: rgba(37, 99, 235, 0.4) !important;
+  color: var(--premium-primary) !important;
+  transform: translateY(-1px);
+}
+
+.danger-button,
+.danger-outline-button {
+  background: #fff1f2 !important;
+  border-color: #fecdd3 !important;
+  color: #be123c !important;
+}
+
+.danger-button:hover,
+.danger-outline-button:hover {
+  background: #ffe4e6 !important;
+}
+
+/* PREMIUM HERO SECTIONS */
+
+.welcome-banner,
+.matching-hero,
+.question-hero,
+.summary-hero,
+.search-hero,
+.ranking-hero,
+.settings-hero {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: var(--premium-shadow-lg) !important;
+}
+
+.welcome-banner::after,
+.matching-hero::after,
+.question-hero::after,
+.summary-hero::after,
+.search-hero::after,
+.ranking-hero::after,
+.settings-hero::after {
+  content: "";
+  position: absolute;
+  width: 380px;
+  height: 380px;
+  border-radius: 50%;
+  right: -160px;
+  top: -160px;
+  background: rgba(255, 255, 255, 0.14);
+  filter: blur(2px);
+}
+
+.welcome-banner > *,
+.matching-hero > *,
+.question-hero > *,
+.summary-hero > *,
+.search-hero > *,
+.ranking-hero > *,
+.settings-hero > * {
+  position: relative;
+  z-index: 1;
+}
+
+.welcome-banner {
+  background:
+    radial-gradient(circle at 82% 24%, rgba(255, 255, 255, 0.2), transparent 30%),
+    linear-gradient(135deg, #1e3a8a, #2563eb 42%, #7c3aed 100%) !important;
+}
+
+/* STATS */
+
+.stat-card {
+  transition: 0.22s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-4px);
+}
+
+.stat-icon {
+  background: linear-gradient(135deg, #eff6ff, #eef2ff) !important;
+  color: var(--premium-primary) !important;
+}
+
+.stat-card.blue::before {
+  background: linear-gradient(90deg, #2563eb, #38bdf8) !important;
+}
+
+.stat-card.purple::before {
+  background: linear-gradient(90deg, #7c3aed, #db2777) !important;
+}
+
+.stat-card.green::before {
+  background: linear-gradient(90deg, #059669, #22c55e) !important;
+}
+
+.stat-card.orange::before {
+  background: linear-gradient(90deg, #ea580c, #f59e0b) !important;
+}
+
+.stat-card.pink::before {
+  background: linear-gradient(90deg, #db2777, #f472b6) !important;
+}
+
+.stat-card.cyan::before {
+  background: linear-gradient(90deg, #0891b2, #22d3ee) !important;
+}
+
+/* TABLES */
+
+.modern-table {
+  border-collapse: separate !important;
+  border-spacing: 0 10px !important;
+}
+
+.modern-table thead th {
+  background: transparent !important;
+  color: #64748b !important;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 12px !important;
+}
+
+.modern-table tbody tr {
+  background: white;
+  box-shadow: 0 8px 22px rgba(15, 23, 42, 0.05);
+}
+
+.modern-table tbody td {
+  border-bottom: none !important;
+  background: white;
+}
+
+.modern-table tbody td:first-child {
+  border-radius: 16px 0 0 16px;
+}
+
+.modern-table tbody td:last-child {
+  border-radius: 0 16px 16px 0;
+}
+
+/* CANDIDATES / JOBS / SEARCH */
+
+.candidate-card,
+.job-card,
+.semantic-candidate-card {
+  transition: 0.2s ease;
+}
+
+.candidate-card:hover,
+.job-card:hover,
+.semantic-candidate-card:hover {
+  transform: translateY(-4px);
+}
+
+.skill-pill {
+  background: rgba(37, 99, 235, 0.08) !important;
+  border: 1px solid rgba(37, 99, 235, 0.18) !important;
+  color: #1d4ed8 !important;
+}
+
+.skill-pill.matched {
+  background: rgba(5, 150, 105, 0.12) !important;
+  border-color: rgba(5, 150, 105, 0.28) !important;
+  color: #047857 !important;
+}
+
+.candidate-avatar,
+.candidate-avatar-lg,
+.candidate-avatar-xl,
+.job-card-icon,
+.context-icon,
+.header-icon {
+  background: linear-gradient(135deg, #2563eb, #7c3aed) !important;
+}
+
+.context-icon.job,
+.security-icon.notification {
+  background: linear-gradient(135deg, #ea580c, #db2777) !important;
+}
+
+.dropzone {
+  background:
+    radial-gradient(circle at top, rgba(37, 99, 235, 0.12), transparent 42%),
+    linear-gradient(180deg, #f8fafc, #eef2ff) !important;
+  border-color: rgba(37, 99, 235, 0.28) !important;
+}
+
+.dropzone:hover,
+.dropzone.active {
+  border-color: var(--premium-primary) !important;
+  box-shadow: inset 0 0 0 1px rgba(37, 99, 235, 0.2), var(--premium-shadow-sm);
+}
+
+/* AI RESULT AREAS */
+
+.score-panel,
+.evaluation-detail-panel,
+.selected-context-card,
+.job-help-card,
+.role-insight-panel,
+.security-panel {
+  background:
+    radial-gradient(circle at top right, rgba(37, 99, 235, 0.08), transparent 34%),
+    rgba(255, 255, 255, 0.94) !important;
+}
+
+.result-section,
+.question-text,
+.summary-card p,
+.text-box,
+.job-description-preview,
+.semantic-education-box {
+  background: rgba(248, 250, 252, 0.9) !important;
+  border: 1px solid rgba(148, 163, 184, 0.22) !important;
+}
+
+.score-circle {
+  box-shadow:
+    0 22px 50px rgba(15, 23, 42, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6);
+}
+
+/* RANKING */
+
+.ranking-table-item,
+.evaluation-list-item,
+.history-item,
+.context-card,
+.preference-item {
+  background: rgba(248, 250, 252, 0.88) !important;
+  border-color: rgba(148, 163, 184, 0.22) !important;
+  transition: 0.18s ease;
+}
+
+.ranking-table-item:hover,
+.evaluation-list-item:hover,
+.history-item:hover,
+.context-card:hover,
+.preference-item:hover {
+  transform: translateY(-2px);
+  background: white !important;
+  box-shadow: var(--premium-shadow-sm);
+}
+
+.top-candidate-card,
+.top-search-match {
+  border: 1px solid rgba(255, 255, 255, 0.16) !important;
+  box-shadow: var(--premium-shadow-lg) !important;
+}
+
+.rank-medal.rank-1 {
+  background: linear-gradient(135deg, #fef3c7, #fde68a) !important;
+}
+
+.rank-medal.rank-2 {
+  background: linear-gradient(135deg, #f8fafc, #e2e8f0) !important;
+}
+
+.rank-medal.rank-3 {
+  background: linear-gradient(135deg, #ffedd5, #fed7aa) !important;
+}
+
+/* SETTINGS */
+
+.profile-cover {
+  background:
+    radial-gradient(circle at top right, rgba(255, 255, 255, 0.25), transparent 34%),
+    linear-gradient(135deg, #2563eb, #7c3aed, #db2777) !important;
+}
+
+.toggle.on {
+  background: linear-gradient(135deg, #2563eb, #7c3aed) !important;
+}
+
+.permission.yes {
+  background: rgba(5, 150, 105, 0.12) !important;
+  color: #047857 !important;
+}
+
+.permission.no {
+  background: rgba(220, 38, 38, 0.1) !important;
+  color: #be123c !important;
+}
+
+/* ALERTS */
+
+.error-alert {
+  background: rgba(254, 242, 242, 0.92) !important;
+  border: 1px solid #fecaca !important;
+  color: #b91c1c !important;
+}
+
+.success-alert {
+  background: rgba(236, 253, 245, 0.92) !important;
+  border: 1px solid #a7f3d0 !important;
+  color: #047857 !important;
+}
+
+.info-alert {
+  background: rgba(239, 246, 255, 0.95) !important;
+  border: 1px solid #bfdbfe !important;
+  color: #1d4ed8 !important;
+}
+
+/* EMPTY / LOADERS */
+
+.empty-state {
+  background:
+    linear-gradient(180deg, rgba(248, 250, 252, 0.92), rgba(241, 245, 249, 0.92)) !important;
+  border: 1px dashed rgba(100, 116, 139, 0.35) !important;
+}
+
+.spinner {
+  border-color: rgba(37, 99, 235, 0.14) !important;
+  border-top-color: var(--premium-primary) !important;
+}
+
+/* RESPONSIVE PREMIUM */
+
+@media (max-width: 1180px) {
+  .topbar {
+    align-items: flex-start;
+  }
+
+  .dashboard-command-grid,
+  .settings-grid,
+  .settings-bottom-grid,
+  .job-layout-grid,
+  .match-selection-grid,
+  .question-workspace-grid,
+  .evaluation-layout-grid,
+  .profile-grid,
+  .details-grid,
+  .upload-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .quick-action-grid,
+  .stats-grid,
+  .jobs-card-grid,
+  .candidate-card-grid,
+  .semantic-results-grid,
+  .summary-result-grid,
+  .question-result-grid,
+  .evaluation-stats-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+@media (max-width: 860px) {
+  .sidebar {
+    display: none !important;
+  }
+
+  .topbar {
+    border-radius: 0 0 24px 24px;
+  }
+
+  .content-area {
+    padding: 22px !important;
+  }
+}
+
+@media (max-width: 760px) {
+  .auth-page {
+    padding: 22px !important;
+  }
+
+  .auth-card {
+    padding: 26px !important;
+  }
+
+  .stats-grid,
+  .quick-action-grid,
+  .jobs-card-grid,
+  .candidate-card-grid,
+  .semantic-results-grid,
+  .summary-result-grid,
+  .question-result-grid,
+  .evaluation-stats-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .welcome-banner,
+  .matching-hero,
+  .question-hero,
+  .summary-hero,
+  .search-hero,
+  .ranking-hero,
+  .settings-hero,
+  .top-candidate-card,
+  .top-search-match,
+  .match-action-panel {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
+
+  .banner-profile-card,
+  .search-score-pill,
+  .top-score {
+    width: 100%;
+  }
+
+  .page-header {
+    flex-direction: column !important;
+  }
+}
+/* ===============================
+   Colored Topbar
+================================ */
+
+.topbar {
+  background: linear-gradient(135deg, #0f172a, #1e3a8a, #581c87) !important;
+  color: #ffffff !important;
+  border-bottom: none !important;
+  box-shadow: 0 10px 30px rgba(37, 99, 235, 0.25);
+}
+
+.topbar h1,
+.topbar h2,
+.topbar h3,
+.topbar p,
+.topbar span {
+  color: #ffffff !important;
+}
+
+.topbar .topbar-title {
+  color: #ffffff !important;
+}
+
+.topbar .topbar-subtitle {
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+
+.topbar button,
+.topbar .icon-button {
+  background: rgba(255, 255, 255, 0.16) !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.25) !important;
+}
+
+.topbar button:hover,
+.topbar .icon-button:hover {
+  background: rgba(255, 255, 255, 0.25) !important;
+}
+
+.topbar .user-chip,
+.topbar .profile-chip {
+  background: rgba(255, 255, 255, 0.18) !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.25) !important;
+}
+
+.topbar input {
+  background: rgba(255, 255, 255, 0.18) !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.25) !important;
+}
+
+.topbar input::placeholder {
+  color: rgba(255, 255, 255, 0.75) !important;
+}
+/* ===============================
+   Fix Topbar Search Visibility
+================================ */
+
+.topbar .search-box,
+.topbar .topbar-search,
+.topbar .search-container {
+  background: rgba(255, 255, 255, 0.18) !important;
+  border: 1px solid rgba(255, 255, 255, 0.28) !important;
+  color: #ffffff !important;
+}
+
+.topbar .search-box input,
+.topbar .topbar-search input,
+.topbar .search-container input,
+.topbar input[type="text"],
+.topbar input[type="search"] {
+  background: rgba(255, 255, 255, 0.16) !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+  outline: none !important;
+}
+
+.topbar .search-box input::placeholder,
+.topbar .topbar-search input::placeholder,
+.topbar .search-container input::placeholder,
+.topbar input[type="text"]::placeholder,
+.topbar input[type="search"]::placeholder {
+  color: rgba(255, 255, 255, 0.78) !important;
+}
+
+.topbar .search-box svg,
+.topbar .topbar-search svg,
+.topbar .search-container svg {
+  color: #ffffff !important;
+  stroke: #ffffff !important;
+}
+
+.topbar input:focus {
+  background: rgba(255, 255, 255, 0.24) !important;
+  border-color: rgba(255, 255, 255, 0.55) !important;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.16) !important;
+}
